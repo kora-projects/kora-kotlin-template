@@ -1,0 +1,7 @@
+services:
+  application:
+    image: kora-kotlin-template
+    build: .
+    restart: unless-stopped
+    ports:
+      - '8085:8085'
