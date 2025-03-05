@@ -25,8 +25,6 @@ docker build -t kora-kotlin-template .
 
 ## Run
 
-Перед запуском локально требуется запустить базу Postgres и накатить миграции.
-
 Запустить локально:
 ```shell
 ./gradlew run
@@ -42,8 +40,6 @@ docker-compose up
 ```
 
 ## Test
-
-Тесты используют [Testcontainers](https://java.testcontainers.org/), требуется [Docker](https://docs.docker.com/engine/install/) окружение для запуска тестов или аналогичные контейнерные окружения ([colima](https://github.com/abiosoft/colima) / итп)
 
 Протестировать локально:
 ```shell

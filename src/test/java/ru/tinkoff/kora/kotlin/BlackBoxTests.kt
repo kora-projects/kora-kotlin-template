@@ -3,6 +3,7 @@ package ru.tinkoff.kora.kotlin
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.testcontainers.containers.Network.SHARED
 import java.net.http.HttpClient
@@ -10,6 +11,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 
+@Disabled("example of black box testing against default /metric endpoint")
 class BlackBoxTests {
 
     companion object {
