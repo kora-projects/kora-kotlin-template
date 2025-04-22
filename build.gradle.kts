@@ -10,6 +10,12 @@ plugins {
 group = property("groupId")!!
 version = property("koraVersion")!!
 
+application {
+    applicationName = "application"
+    mainClass.set("ru.tinkoff.kora.kotlin.ApplicationKt")
+    applicationDefaultJvmArgs = listOf("-Dfile.encoding=UTF-8")
+}
+
 kotlin {
     jvmToolchain { languageVersion.set(JavaLanguageVersion.of(17)) }
     sourceSets.main { kotlin.srcDir("build/generated/ksp/main/kotlin") }
@@ -44,12 +50,6 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter:1.19.8")
 }
 
-application {
-    applicationName = "application"
-    mainClass.set("ru.tinkoff.kora.kotlin.ApplicationKt")
-    applicationDefaultJvmArgs = listOf("-Dfile.encoding=UTF-8")
-}
-
 tasks.distTar {
     archiveFileName.set("application.tar")
 }
@@ -58,10 +58,6 @@ tasks.withType<JavaExec> {
     environment(
         "" to "",
     )
-}
-
-ksp {
-    allowSourcesFromOtherPlugins = true
 }
 
 tasks.test {
