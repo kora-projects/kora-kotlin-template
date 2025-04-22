@@ -12,7 +12,7 @@ version = property("koraVersion")!!
 
 application {
     applicationName = "application"
-    mainClass.set("ru.tinkoff.kora.kotlin.crud.ApplicationKt")
+    mainClass.set("ru.tinkoff.kora.kotlin.ApplicationKt")
     applicationDefaultJvmArgs = listOf("-Dfile.encoding=UTF-8")
 }
 
