@@ -3,8 +3,8 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     id("application")
     id("jacoco")
-    kotlin("jvm") version ("1.9.10")
-    id("com.google.devtools.ksp") version ("1.9.10-1.0.13")
+    kotlin("jvm") version ("1.9.25")
+    id("com.google.devtools.ksp") version ("1.9.25-1.0.20")
 }
 
 group = property("groupId")!!
@@ -32,6 +32,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://central.sonatype.com/repository/maven-snapshots") }
 }
 
 dependencies {
