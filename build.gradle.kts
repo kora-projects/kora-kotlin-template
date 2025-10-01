@@ -80,6 +80,10 @@ tasks.test {
         html.required = false
         junitXml.required = false
     }
+
+    jacoco {
+        jacocoExcludeSet.forEach { exclude(it) }
+    }
 }
 
 tasks.jacocoTestReport {
