@@ -8,7 +8,9 @@ import ru.tinkoff.kora.logging.logback.LogbackModule
 
 
 @KoraApp
-interface Application : HoconConfigModule, UndertowModule, LogbackModule
+interface Application : HoconConfigModule,
+    UndertowModule, // only private server for health & metrics
+    LogbackModule
 
 fun main() {
     KoraApplication.run { ApplicationGraph.graph() }
