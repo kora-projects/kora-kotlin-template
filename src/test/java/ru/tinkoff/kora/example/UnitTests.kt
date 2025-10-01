@@ -1,4 +1,4 @@
-package ru.tinkoff.kora.kotlin
+package ru.tinkoff.kora.example
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
