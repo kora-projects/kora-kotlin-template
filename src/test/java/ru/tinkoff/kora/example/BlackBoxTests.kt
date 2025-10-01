@@ -1,4 +1,4 @@
-package ru.tinkoff.kora.kotlin
+package ru.tinkoff.kora.example
 
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -11,7 +11,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 
-@Disabled("example of black box testing against default /metric endpoint")
+@Disabled("example of black box testing against default /system/readiness endpoint")
 class BlackBoxTests {
 
     companion object {
@@ -35,7 +35,7 @@ class BlackBoxTests {
     fun serviceReady() {
         val request = HttpRequest.newBuilder()
             .GET()
-            .uri(container.privateUri.resolve("/metrics"))
+            .uri(container.privateUri.resolve("/system/readiness"))
             .timeout(Duration.ofSeconds(1))
             .build()
 
